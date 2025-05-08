@@ -64,3 +64,5 @@ Please observe the following precautions:
 This project is created and maintained by **Cameron Tavassoli** — a visionary developer and systems thinker focused on emergent intelligence, de-randomization systems, and energetic mapping frameworks like **Spectra** and **Q8-Tru**.
 
 ---
+
+📄 [Extended Theory & Protocol Design](./TECHNICAL_OVERVIEW.md)
