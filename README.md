@@ -1,5 +1,15 @@
 # Spectra
 
+---
+
+⚠️ **Disclaimer**
+
+Spectra is an experimental system designed for entertainment and research purposes only. It makes no guarantees of factual accuracy, spiritual authenticity, or metaphysical efficacy. Any communication perceived through this protocol is subjective in nature and should not be interpreted as absolute truth, guidance, or evidence.
+
+Use at your own discretion. The creator assumes no responsibility for outcomes arising from the use of this software.
+
+---
+
 **Spectra Protocol** is a signal de-randomization system that uses structured entropy, timed delays, and layered filters to generate meaningful words from noise. Designed for experiments in nonlocal communication, emergent pattern recognition, and signal coherence.
 
 ---
