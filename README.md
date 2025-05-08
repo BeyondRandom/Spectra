@@ -1,4 +1,4 @@
-# Spectra
+# Spectra Protocol: A Neg-Entropy Grid-Based Messaging System
 
 ---
 
