@@ -1,4 +1,4 @@
-**Message Manager Process Flow in StreamingSentence Component**
+### Message Manager Process Flow in StreamingSentence Component
 
 The component that manages messages in our application is called `StreamingSentence`. This component is responsible for displaying words received from grid processing and managing the message log that shows the conversation history.
 
