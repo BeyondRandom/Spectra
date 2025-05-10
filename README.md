@@ -1,5 +1,6 @@
 # Spectra Protocol: A Neg-Entropy Grid-Based Messaging System
 
+🔗 [View source code in the `code-dump` branch](https://github.com/BeyondRandom/Spectra/tree/code-dump)
 ---
 
 ⚠️ **Disclaimer**
