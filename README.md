@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo4.png" alt="Spectra Logo" width="300"/>
+  <img src="Logo4.png" alt="Spectra Logo" width="300"/>
 </p>
 
 
