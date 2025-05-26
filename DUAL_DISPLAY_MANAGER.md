@@ -33,8 +33,7 @@ const handleGridPostedToCache = (event: CustomEvent) => {
 
 #### Features:
 
-* 🧵 Parallel word processing
-* 🌌 Cosmic threshold filtering *(currently disabled)*
+* 🌌 Cosmic threshold filtering
 * 🗃️ Message log capped at 50 entries
 
 ---
