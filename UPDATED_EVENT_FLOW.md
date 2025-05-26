@@ -34,7 +34,7 @@ Triggers attention and cosmic scoring pipelines.
 
 Processed words, scores, and metadata are cached. A `gridPostedToCache` event is dispatched with full grid info.
 
-## 8. 🎥 `StreamingSentence.tsx`
+## 8. 🎥 `StreamingModule.tsx`
 
 Listens **only** for `gridPostedToCache`. Displays words for 5 seconds, **without** ever triggering grid logic.
 
