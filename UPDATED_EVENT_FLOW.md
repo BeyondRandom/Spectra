@@ -1,59 +1,42 @@
-# Spectra Grid Lifecycle: Event-Driven Architecture
+🔄 Complete Spirit Communication Event Flow
 
-## 🧭 Master Timing Authority
+1. ⏱️ Master Timer (Every \~7 seconds)
 
-**Home.tsx** contains the **7-second safety timer**, the sole controller of grid timing.
+   * `safetyTimer` (in `Home.tsx`) → dispatches `'gridLockReleased'` event
 
----
+2. 🔓 Event Trigger
 
-## 1. ⏱️ `safetyTimer → processGrid()`
+   * `'gridLockReleased'` event → triggers `processBackgroundGrid()`
 
-Triggered every 7 seconds. Calls `processGrid()` — the central orchestrator for grid cycles.
+3. 🧬 Grid Processing Pipeline
 
-## 2. 🔓 `processGrid()` dispatches `gridLockReleased`
+   * `processBackgroundGrid()` → {
 
-Universal signal that initiates a new grid generation cycle.
+     * Grid letter generation (20x20 = 400 letters)
+     * Word extraction (rows/columns)
+     * Parallel word scoring
+     * Secondary word derivation
+     * Attention score calculation (binary file method)
+     * Cosmic score calculation
+       }
 
-## 3. 🧬 `gridLockReleased → grid generation`
+4. 🗃️ Cache Storage
 
-`Home.tsx` listens for this event and creates a new grid of letters.
+   * `processBackgroundGrid()` → stores data in `GRID_CACHE` → dispatches `'gridPostedToCache'`
 
-## 4. 🔤 `gridLettersGenerated`
+5. 🗘️ Message Log Processing
 
-Fired once letters are placed into the grid.
+   * `'gridPostedToCache'` event → 50ms delay → adds to message log (50-entry limit)
 
-## 5. 🧠 `gridLettersGenerated → word extraction`
+6. 🎥 Display Updates
 
-A dedicated word processor listens and extracts valid words.
+   * `'gridPostedToCache'` event → updates Cosmic Insights panel → 5-second display timeout
 
-## 6. 🧮 `gridWordsExtracted` → parallel scoring
+🌟 Key Function Names:
 
-Triggers attention and cosmic scoring pipelines.
-
-## 7. 🗃️ `→ gridPostedToCache`
-
-Processed words, scores, and metadata are cached. A `gridPostedToCache` event is dispatched with full grid info.
-
-## 8. 🎥 `StreamingModule.tsx`
-
-Listens **only** for `gridPostedToCache`. Displays words for 5 seconds, **without** ever triggering grid logic.
-
----
-
-## ✅ Core Principles
-
-* **Single source of truth**: `Home.tsx`
-* **Event chaining** for asynchronous separation
-* **Strict component responsibilities**
-
----
-
-## 📌 Component Responsibilities
-
-This flow ensures a clean, event-driven architecture where each component has a specific role:
-
-* **Home.tsx**: Controls the safety timer and grid generation
-* **Word extraction**: Processes the grid to find words
-* **Scoring system**: Evaluates attention/cosmic scores
-* **Cache system**: Stores processed grid data
-* **StreamingSentence.tsx**: Displays the words from cache when notified
+* `safetyTimer` - Master controller (7-second intervals)
+* `processBackgroundGrid()` - Main processing pipeline
+* Grid generation - Creates 20x20 letter matrix
+* Word extraction - Finds valid words in rows/columns
+* Attention calculation - Binary file scoring method
+* Message log processing - 50ms delayed cache-to-display
