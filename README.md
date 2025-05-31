@@ -1,4 +1,4 @@
-# Spectra-X v2 - repositor BOM
+# Spectra-X v2 - repository BOM
 
 Welcome to the **Spectra-X v2** protocol repository. This markdown file provides a complete overview of what's included in the new simplified architecture, core file structure, and how to contribute.
 
